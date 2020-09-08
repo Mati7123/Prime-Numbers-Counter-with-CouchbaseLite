@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CouchbaseLite</string>
+    <string name="save">Save</string>
+    <string name="second">0</string>
+    <string name="primes">Primes</string>
+    <string name="first">0</string>
+    <string name="primesCount">0</string>
+    <string name="liczby_pierwsze">Liczby pierwsze:</string>
+</resources>
