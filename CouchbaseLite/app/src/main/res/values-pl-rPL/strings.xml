@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CouchbaseLite</string>
+    <string name="save_button_text">Zapisz dane</string>
+    <string name="primes_button_text">Pokaż ilość liczb pierwszych</string>
+    <string name="first_value">0</string>
+
+    <string name="second_value">0</string>
+    <string name="enter_second_digit">Podaj drugą liczbę</string>
+    <string name="enter_first_digit">Podaj pierwszą liczbę</string>
+    <string name="data_saved">Dane zostały zapisane</string>
+    <string name="data_not_saved">Wystąpił bład podczas zapisywania danych</string>
+
+</resources>

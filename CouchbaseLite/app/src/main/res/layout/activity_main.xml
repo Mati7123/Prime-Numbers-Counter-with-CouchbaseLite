@@ -6,60 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/save"
-        android:layout_width="90dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginBottom="280dp"
-        android:text="@string/save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/TextViewConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/firstNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyStyle"
+            android:ems="10"
+            android:hint="@string/enter_first_digit"
+            android:inputType="number"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/secondNumber"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/secondNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyStyle"
+            android:ems="10"
+            android:hint="@string/enter_second_digit"
+            android:inputType="number"
+            app:layout_constraintLeft_toRightOf="@id/firstNumber"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:autofillHints="" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/primes"
-        android:layout_width="90dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="280dp"
-        android:text="@string/primes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/firstNumber"
-        android:layout_width="90dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginBottom="50dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:inputType="number"
-        android:text="@string/first"
-        app:layout_constraintBottom_toTopOf="@+id/save"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/secondNumber"
-        android:layout_width="90dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="50dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:inputType="number"
-        android:text="@string/second"
-        app:layout_constraintBottom_toTopOf="@+id/primes"
-        app:layout_constraintEnd_toEndOf="parent" />
+        style="@style/MyStyle"
+        android:text="@string/primes_button_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:onClick="showCountOfPrimes"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextViewConstraintLayout" />
 
     <TextView
         android:id="@+id/primesCount"
+        style="@style/MyStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="125dp"
-        android:text="@string/primesCount"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/primes"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/saveButton"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        style="@style/MyStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_button_text"
+        android:onClick="saveData"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/primesCount" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

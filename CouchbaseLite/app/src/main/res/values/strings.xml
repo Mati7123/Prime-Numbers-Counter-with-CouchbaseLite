@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">CouchbaseLite</string>
-    <string name="save">Save</string>
-    <string name="second">0</string>
-    <string name="primes">Primes</string>
-    <string name="first">0</string>
-    <string name="primesCount">0</string>
-    <string name="liczby_pierwsze">Liczby pierwsze:</string>
+    <string name="save_button_text">Save data</string>
+    <string name="primes_button_text">Show count of primes</string>
+    <string name="first_value">0</string>
+    <string name="second_value">0</string>
+    <string name="enter_second_digit">Enter second digit</string>
+    <string name="enter_first_digit">Enter first digit</string>
+    <string name="data_saved">Data saved</string>
+    <string name="data_not_saved">Error during saving data</string>
 </resources>
